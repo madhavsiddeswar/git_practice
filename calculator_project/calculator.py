@@ -25,9 +25,12 @@ while True:
         print("Thank you for using calculator!")
         break
 
-
-    num1 = float(input("Enter first number: "))
-    num2 = float(input("Enter second number: "))
+    try:
+        num1 = float(input("enter first number :"))
+        num2 = float(input("enter second number: "))
+    except ValueError:
+        print("invalid number entered!")
+        continue
 
     if choice == "1":
         print("Result: ", add(num1,num2))
@@ -39,4 +42,3 @@ while True:
         print("Result: ", divide(num1,num2))
     else:
         print("Invalid choice")
-
