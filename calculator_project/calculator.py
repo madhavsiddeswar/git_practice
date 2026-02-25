@@ -9,6 +9,8 @@ def divide(a,b):
     if b == 0:
         return "Cannot divide by zero"
     return a/b
+def power(a,b):
+    return a**b
 
 while True:
     print("\nSimple Calulator")
@@ -17,17 +19,18 @@ while True:
     print("2. Subtract")
     print("3. Multiply")
     print("4. Divide")
-    print("5. Exit")
+    print("5. Power")
+    print("6. Exit")
 
-    choice = input("Enter choice (1-5): ")
+    choice = input("Enter choice (1-6): ")
 
-    if choice == "5":
+    if choice == "6":
         print("Thank you for using calculator!")
         break
 
     try:
         num1 = float(input("enter first number :"))
-        num2 = float(input("enter second number: "))
+        num2 = float(input("enter second number:"))
     except ValueError:
         print("invalid number entered!")
         continue
@@ -40,5 +43,7 @@ while True:
         print("Result: ", multiply(num1,num2))
     elif choice == "4":
         print("Result: ", divide(num1,num2))
+    elif choice == "5":
+        print("Result: ", power(num1,num2))
     else:
         print("Invalid choice")
